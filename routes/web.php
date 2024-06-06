@@ -6,6 +6,9 @@ use App\Http\Controllers\versiculoController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/home', function () {
+    return view('welcome');
+});
 
 Route::get('/versiculos', [versiculoController::class, 'index'])->name('versiculos.index');
 Route::get('/versiculo/criar', [versiculoController::class, 'create'])->name('versiculos.create')->middleware('auth');
